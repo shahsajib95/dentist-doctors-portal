@@ -1,0 +1,52 @@
+
+.top{
+    height: auto;
+    font-family: 'Roboto', sans-serif;
+}
+.top:before{
+    content: "";
+    background-image: url(../../img/mask.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 65%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+.header-top{
+    background-color: #3A4256;
+    height: 560px;
+}
+.header-content{
+    position: relative;
+}
+.top .btn-use{
+    padding: 10px 50px;
+    background-color: #10CFE2;
+    color: white;
+}
+.top .navbar{
+    margin-left: 20vh;
+}
+.bg-open{
+    background-color: #1CC7C1 ;
+    color: white;
+    display: flex;
+    font-size: 12px;
+    width: 500px!important;
+}
+.bg-visit{
+    background-color: #3A4256;
+    color: white;
+    font-size: 12px;
+}
+.icon{
+    font-size: 80px;
+}
+.time{
+    position: absolute;
+    top: 65%;
+
+}

@@ -1,0 +1,60 @@
+.appoinment-top{
+  font-family: 'Roboto', sans-serif;
+}
+.appoinment-top:before{
+    content: "";
+    background-image:url(../../img/MaskGroup.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.10;
+}
+.header-top{
+    background-color: none!important;
+}
+
+.calendar{
+  position: absolute;
+  top: 65%;
+  margin-left: 20%;
+}
+
+.appoinment{
+  position: absolute;
+  top: 90%;
+  width: 80%;
+}
+
+.appoinment h1,h5{
+  color: #10CFE9;
+}
+
+.appoinment .app-box{
+  width: auto;
+  padding: 20px 30px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.appoinment .btn-use{
+    background-color: #10CFE2;
+    color: white;
+}
+
+p{
+  font-size: 13px;
+}
+
+.calendar .react-calendar{
+  border: white;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
