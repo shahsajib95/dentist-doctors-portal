@@ -1,0 +1,35 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.login-form{
+    margin: 10%;
+    padding: 5%;
+    width: 80%;
+    -webkit-box-shadow: -9px 0px 11px -10px rgba(0,0,0,0.75);
+-moz-box-shadow: -9px 0px 11px -10px rgba(0,0,0,0.75);
+box-shadow: -9px 0px 11px -10px rgba(0,0,0,0.75);
+border-radius: 15px;
+}
+.btn-use{
+    background-color: #14E5FF;
+    color: white;
+    width: 90%;
+}
+
+.form{
+    border: none;
+    border-bottom: 1px solid gray;
+    width:90%;
+}
+.form input, input::placeholder{
+    display:block;
+    height:50px;
+     width:90%;
+    margin:0 auto;
+    border:none;
+}
+.form input:active:focus, input:hover, input:active:focus, input:focus{
+    color:#14E5FF;
+    outline:none;
+    border-bottom:1px solid #14E5FF;
+}

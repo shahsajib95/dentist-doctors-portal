@@ -1,0 +1,39 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+.dash-icon{
+    background-image: linear-gradient(to bottom, #18D2AE, #16D2BD);
+    height: 100%;
+    width: 100%;
+}
+
+.top-box1, .top-box2, .top-box3, .top-box4{
+    border-radius: 15px;
+}
+.top-box1{
+    background-color: #F1536E;
+}
+
+.top-box2{
+    background-color: #3EA5F4;
+}
+
+.top-box3{
+    background-color: #00C689;
+}
+
+.top-box4{
+    background-color: #FDA006;
+}
+
+.dash-table{
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.log-out{
+    margin-top: 400px;
+}

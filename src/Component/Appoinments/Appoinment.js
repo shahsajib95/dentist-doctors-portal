@@ -5,7 +5,6 @@ import './Appoinment.css'
 import 'react-calendar/dist/Calendar.css';
 import treatment from '../../Component/fakeData/treatment'
 import "bootstrap/dist/css/bootstrap.css";
-import { Container, Row, Col} from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 const Appoinment = (props) => {
@@ -23,24 +22,32 @@ const addAppoinment = (appoinment) =>{
     setAppoName(newAppoName);
 }
 
- // // const appoinment = 
-    // fetch('http://localhost:4200/bookAppoinment',{
-    //     method:'POST',
-    //     headers: {
-    //         "Content-type": "application/json; charset=UTF-8"
-    //   },
-    //     body:JSON.stringify(appoinment)
-    //    })
+
 
 const {appoTime, personname, phone, email, date} = setAppo;
 
 const addAppoData = (e)=>{
     e.preventDefault()
-    setAppo({ ...appo, [e.target.name]: e.target.value } )
+    setAppo({ ...appo, [e.target.name]: e.target.value })
 };
-const bookAppoinment = e =>{
-   console.log(appo)
+const bookAppoinment = (e) =>{
+    const appoinment = appo;
+    console.log("before", appoinment)
+    fetch('http://localhost:4200/addAppoinments',{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(appoinment)
+    })
+    .then(res => res.json())
+    .then(data=>{
+        console.log("added", data)
+    })
 }
+
+
+
     return (
      
         <section className="appoinment-top">
@@ -113,11 +120,11 @@ const bookAppoinment = e =>{
                     <div className="modal-body">
                     <from>
                     <div className="form-group">
-                        <input name="time" placeholder={time} className="form-control mb-2" value={appoTime} onChange={addAppoData}></input>
+                        <input name="time" placeholder={time} className="form-control mb-2" value={appoTime ? appoTime : time} onChange={addAppoData}></input>
                         <input name="name" placeholder="Your Name" className="form-control mb-2"  value={personname} onChange={addAppoData}></input>
                         <input name="phone" placeholder="Phone Number" className="form-control mb-2" value={phone} onChange={addAppoData}></input>
                         <input name="email" placeholder="Email" className="form-control mb-2" value={email} onChange={addAppoData}></input>
-                        <input name="date" placeholder={selectDate ? selectDate : "Please Select Date from Calendar"} className="form-control mb-2" value={date} onChange={addAppoData}></input>
+                        <input name="date" placeholder={selectDate ? selectDate : "Please Select Date from Calendar"} className="form-control mb-2" value={date ? date : selectDate} onChange={addAppoData}></input>
                     </div>
                     </from>
                     </div>
